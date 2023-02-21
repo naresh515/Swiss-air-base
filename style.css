@@ -9,6 +9,12 @@ body {
     overflow: hidden;
 }
 
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .nav {
     background-image: url(./img/DSCF9837_front_large.png);
     background-repeat: no-repeat;
@@ -116,8 +122,8 @@ body {
 }
 
 .nav_text {
-    position: relative;
-    top: 15%;
+    position: absolute;
+    top: 100px;
 }
 
 .nav_text h1 {
@@ -201,7 +207,7 @@ body {
 .box2 {
     content: "";
     position: absolute;
-    top: 3962px;
+    top: 3889px;
     left: 0;
     width: 0;
     height: 0;
@@ -836,11 +842,8 @@ p.right_footer:after {
     }
 
     .nav_right {
-        display: flex;
-        width: 100%;
-        right: 0;
-        top: 20px;
-        position: relative;
+        right: 0px;
+        top: 35px;
         gap: 5px;
     }
 
@@ -850,8 +853,8 @@ p.right_footer:after {
     }
 
     .nav_left {
-        position: relative;
-        left: 0;
+        position: absolute;
+        left: 0px;
         top: 20px;
     }
 
@@ -958,7 +961,7 @@ p.right_footer:after {
     .fixed {
         position: fixed;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
         padding: 0px 10px;
         top: 0;
         background-color: rgba(255, 255, 255, 0.9) !important;
