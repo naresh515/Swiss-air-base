@@ -1,8 +1,13 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(./Refrigerator\ Deluxe\ Light.otf);
+}
+
 body {
     margin: 0 auto;
     width: 100%;
     height: auto;
-    font-family: 'Assistant';
+    font-family: 'Assistant', "myFirstFont";
 }
 
 .body_container {
@@ -285,6 +290,10 @@ video {
     font-size: 20px;
     width: 80%;
     padding-left: 60px;
+}
+
+h1 {
+    font-family: 'myFirstFont';
 }
 
 .hero2,
@@ -651,7 +660,7 @@ hr {
     border: none;
     background: none;
     color: white;
-    font: 700 30px/48px "Refrigerator Deluxe";
+    font: 700 30px/48px "myFirstFont";
 }
 
 .panel1 {
@@ -769,7 +778,7 @@ p.right_footer:after {
     padding-left: 10px;
 }
 
-@media screen and (min-width:300px) and (max-width:1000px) {
+@media screen and (min-width:300px) and (max-width:800px) {
     body {
         margin: 0 auto;
         width: 100%;
