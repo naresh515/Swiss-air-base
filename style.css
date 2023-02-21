@@ -27,7 +27,8 @@ video {
     height: 660px;
 }
 
-.line {
+.line,
+.icon {
     color: white;
 }
 
@@ -51,17 +52,14 @@ video {
     position: absolute;
     right: 60px;
     top: 50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
 
 .nav_left img {
     height: 135px;
     cursor: pointer;
-}
-
-.nav_right {
-    display: flex;
-    gap: 20px;
-    align-items: center;
 }
 
 .bg_red {
@@ -72,11 +70,6 @@ video {
     border-radius: 5px;
     cursor: pointer;
 }
-
-.icon {
-    color: white;
-}
-
 
 .dropdown {
     cursor: pointer;
@@ -212,7 +205,7 @@ video {
 .box2 {
     content: "";
     position: absolute;
-    top: 3889px;
+    top: 3800px;
     left: 0;
     width: 0;
     height: 0;
@@ -281,15 +274,10 @@ video {
     padding: 90px 0px 160px;
 }
 
-.hero_text h1 {
+.hero_text h1,
+.hero2_text h1 {
     font-size: 80px;
     padding-left: 20px;
-}
-
-.hero_text p {
-    font-size: 20px;
-    width: 80%;
-    padding-left: 60px;
 }
 
 h1 {
@@ -308,11 +296,7 @@ h1 {
     padding: 90px 0px 160px;
 }
 
-.hero2_text h1 {
-    font-size: 80px;
-    padding-left: 20px;
-}
-
+.hero_text p,
 .hero2_text p {
     font-size: 16px;
     width: 80%;
@@ -851,7 +835,7 @@ p.right_footer:after {
     }
 
     .nav_right {
-        right: 0px;
+        right: 10px;
         top: 35px;
         gap: 5px;
     }
@@ -863,7 +847,7 @@ p.right_footer:after {
 
     .nav_left {
         position: absolute;
-        left: 0px;
+        left: 5px;
         top: 20px;
     }
 
@@ -925,11 +909,7 @@ p.right_footer:after {
         width: 100%;
     }
 
-    .second_footer_first {
-        padding: 20px 0px;
-        text-align: center;
-    }
-
+    .second_footer_first,
     .second_footer_second {
         padding: 20px 0px;
         text-align: center;
@@ -971,9 +951,11 @@ p.right_footer:after {
         position: fixed;
         width: 100%;
         z-index: 2;
-        padding: 0px 10px;
+        display: flex;
+        padding: 0px;
         top: 0;
         background-color: rgba(255, 255, 255, 0.9) !important;
+        justify-content: space-around;
     }
 
     .fixed .humberg2 span {
@@ -1012,26 +994,16 @@ p.right_footer:after {
         padding: 20px 0px;
     }
 
-    .hero_text h1 {
-        padding: 0px;
-        font-size: 40px;
-        width: 90%;
-    }
-
-    .hero_text p {
-        padding: 0px;
-        font-size: 15px;
-        width: 90%;
-    }
-
+    .hero_text h1,
     .hero2_text h1 {
         padding: 0px;
         font-size: 40px;
         width: 90%;
     }
 
+    .hero_text p,
     .hero2_text p {
-        padding: 0;
+        padding: 0px;
         font-size: 15px;
         width: 90%;
     }
