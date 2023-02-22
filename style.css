@@ -616,7 +616,7 @@ img.social_icon {
 }
 
 .ico23 {
-    display: none;
+    display: none !important;
 }
 
 .second_footer {
