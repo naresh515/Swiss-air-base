@@ -128,10 +128,7 @@ video {
     display: block;
 }
 
-.ico_text::before,
-.ico_text2::before,
-.ico_text3::before,
-.ico_text4::before {
+.tooltip::before {
     content: "";
     position: absolute;
     top: -4px;
@@ -142,7 +139,6 @@ video {
     background: #fff;
     margin-left: -5px;
     transform: rotate(45deg);
-    box-shadow: 0 0 4px 0 rgb(51 51 51 / 48%);
 }
 
 .nav_left img {
@@ -152,7 +148,7 @@ video {
 
 .bg_red {
     padding: 5px 10px 6px;
-    background-color: red;
+    background-color: #DA0000;
     color: #fff;
     border: 1px solid #DA0000;
     font-size: 16px;
@@ -160,6 +156,14 @@ video {
     text-shadow: none;
     box-shadow: none;
     font-weight: 400;
+    font-family: 'assistant';
+}
+
+.bg_red:hover {
+    background: #b50000;
+    border-color: #b50000;
+    color: #fff;
+    text-shadow: none;
 }
 
 .dropdown {
@@ -224,6 +228,7 @@ video {
 .humberg2 {
     width: 34px;
     height: 27px;
+    transition: all .5s ease-in-out;
 }
 
 .humberg2 span {
@@ -234,20 +239,17 @@ video {
     margin-bottom: 9.5px;
 }
 
-.humberg.is-active .line2 {
+.humberg2.is-active .line2 {
     opacity: 0;
+    transition: all .5s ease-out;
 }
 
-.humberg.is-active .line1 {
+.humberg2.is-active .line1 {
     transform: translateY(9px) rotate(50deg);
 }
 
-.humberg.is-active .line3 {
+.humberg2.is-active .line3 {
     transform: translateY(-13px) rotate(-45deg);
-}
-
-.humberg.is-active {
-    margin-top: 15px;
 }
 
 .humberg2 span:last-child {
@@ -498,7 +500,7 @@ img.logo1 {
 }
 
 img.social_icon {
-    width: 25px;
+    width: 35px;
 }
 
 .btn {
@@ -589,17 +591,15 @@ img.social_icon {
     cursor: pointer;
 }
 
-#accordion {
-    display: flex;
-    justify-content: space-evenly;
-    width: 80%;
+.margin {
+    margin-bottom: 20px;
 }
 
-.accordion-item {
-    position: relative;
-    top: 50px;
-    height: 250px;
+#accordion {
+    display: flex;
+    gap: 100px;
 }
+
 
 .heading {
     color: #333333;
@@ -620,14 +620,11 @@ img.social_icon {
 }
 
 .second_footer {
-    position: relative;
     display: flex;
     justify-content: space-between;
-    width: 87%;
-    left: 110px;
-    height: 155px;
     border-top: 1px solid #D7D7D7;
     padding-top: 55px;
+    margin-top: 55px;
 }
 
 .ico {
@@ -676,34 +673,40 @@ img.social_icon {
 }
 
 .third_footer {
-    position: relative;
-    height: 90px;
     border-top: 1px solid #D7D7D7;
     padding-top: 55px;
-    width: 87%;
-    margin-left: 100px;
+    margin-top: 55px;
 }
 
 .footer_img {
     display: flex;
-    width: 40%;
-    justify-content: space-around;
-    position: relative;
+    width: 50%;
+    gap: 50px;
 }
 
-.footer_img img {
+.footer_img .img_1 {
     max-width: 100%;
+    max-height: 42px;
+}
+
+.footer_img .img_2,
+.footer_img .img_3 {
+    max-width: 100%;
+    max-height: 24px;
+    padding-top: 15px;
+}
+
+.footer_img .img_3 {
     max-height: 30px;
+
 }
 
 .last_footer {
     display: flex;
     justify-content: space-between;
-    width: 87%;
-    left: 110px;
-    position: relative;
     border-top: 1px solid #D7D7D7;
-    padding-top: 24px;
+    padding-top: 25px;
+    margin-top: 55px;
 }
 
 .fixed #accordion1 {
@@ -870,6 +873,16 @@ p.right_footer:after {
     padding-left: 10px;
 }
 
+.footer_inner {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    padding-top: 75px;
+    padding-bottom: 27px;
+}
+
 @media screen and (min-width:320px) and (max-width:800px) {
     body {
         margin: 0 auto;
@@ -939,7 +952,8 @@ p.right_footer:after {
         color: #333333;
         position: absolute;
         right: 0;
-        padding-top: 7px;
+        display: block !important;
+        margin-top: -25px;
     }
 
     .nav {
@@ -1032,10 +1046,9 @@ p.right_footer:after {
         display: inline-block;
         left: 0;
         height: auto;
-        width: 90%;
         top: 0;
         padding-top: 10px;
-        padding-left: 15px;
+        margin-top: 10px;
     }
 
     .second_footer_first {
@@ -1070,10 +1083,9 @@ p.right_footer:after {
         left: 0;
         display: flex;
         flex-direction: column;
-        width: 90%;
         top: 0px;
         background-color: #EDEDED;
-        padding: 10px 0px 15px 15px;
+        padding: 10px 0px 15px;
     }
 
     .line {
@@ -1100,6 +1112,7 @@ p.right_footer:after {
         top: 0;
         background-color: rgba(255, 255, 255, 0.9) !important;
         justify-content: space-around;
+        gap: 0px;
     }
 
     .fixed .humberg2 span {
@@ -1119,9 +1132,9 @@ p.right_footer:after {
 
     .third_footer {
         top: 0px;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
-        padding: 20px 0px 15px 15px;
+        padding: 20px 0px 15px;
     }
 
     .hide {
@@ -1221,9 +1234,9 @@ p.right_footer:after {
     #accordion {
         flex-direction: column;
         align-items: flex-start;
-        padding-left: 15px;
         padding-bottom: 20px;
-        width: 90%;
+        width: 95%;
+        gap: 0;
     }
 
     button.heading {
@@ -1302,5 +1315,9 @@ p.right_footer:after {
     .grid {
         width: 90%;
         margin: 0 auto;
+    }
+
+    .footer_inner {
+        padding: 30px 20px 17px;
     }
 }
