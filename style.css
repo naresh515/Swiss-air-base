@@ -10,6 +10,10 @@ body {
     font-family: 'Assistant', "myFirstFont";
 }
 
+h1 {
+    font-family: 'myFirstFont';
+}
+
 .body_container {
     overflow: hidden;
 }
@@ -27,16 +31,19 @@ video {
     height: 660px;
 }
 
-.line,
-.icon {
+.line {
     color: white;
 }
 
-.navbar {
+.icon {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+    text-align: center;
 }
 
+.navbar,
 .navbar1 {
     display: flex;
     align-items: center;
@@ -57,18 +64,102 @@ video {
     align-items: center;
 }
 
+.ico_text {
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    padding: 8px 15px 8px;
+    color: #333333;
+    top: 40px;
+    margin-left: -25px;
+    display: none;
+    z-index: 1;
+}
+
+.ico_text4 {
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    padding: 8px 15px 8px;
+    color: #333333;
+    top: 75px;
+    margin-left: -25px;
+    display: none;
+    z-index: 1;
+}
+
+.ico_text2 {
+    padding: 9px 50px 10px;
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    color: #333333;
+    top: 40px;
+    margin-left: -45px;
+    display: none;
+    z-index: 1;
+}
+
+.ico_text3 {
+    padding: 9px 50px 10px;
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    color: #333333;
+    top: 75px;
+    margin-left: -45px;
+    display: none;
+    z-index: 1;
+}
+
+.icon:hover .ico_text {
+    display: block;
+}
+
+.icon:hover .ico_text4 {
+    display: block;
+}
+
+.dropdown .dropbtn:hover .ico_text2 {
+    display: block;
+}
+
+.dropdown .dropbtn:hover .ico_text3 {
+    display: block;
+}
+
+.ico_text::before,
+.ico_text2::before,
+.ico_text3::before,
+.ico_text4::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: #fff;
+    margin-left: -5px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 4px 0 rgb(51 51 51 / 48%);
+}
+
 .nav_left img {
-    height: 135px;
+    height: 120px;
     cursor: pointer;
 }
 
 .bg_red {
-    padding: 10px;
+    padding: 5px 10px 6px;
     background-color: red;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #DA0000;
+    font-size: 16px;
     cursor: pointer;
+    text-shadow: none;
+    box-shadow: none;
+    font-weight: 400;
 }
 
 .dropdown {
@@ -89,6 +180,7 @@ video {
     color: white;
     border: none;
     cursor: pointer;
+    padding: 0px 15px 0px 0px;
 }
 
 
@@ -129,6 +221,11 @@ video {
     color: white;
 }
 
+.humberg2 {
+    width: 34px;
+    height: 27px;
+}
+
 .humberg2 span {
     height: 1px;
     width: 30px;
@@ -147,6 +244,10 @@ video {
 
 .humberg.is-active .line3 {
     transform: translateY(-13px) rotate(-45deg);
+}
+
+.humberg.is-active {
+    margin-top: 15px;
 }
 
 .humberg2 span:last-child {
@@ -202,10 +303,14 @@ video {
     padding: 10px 0px;
 }
 
+aside {
+    position: relative;
+}
+
 .box2 {
     content: "";
     position: absolute;
-    top: 3800px;
+    top: -100px;
     left: 0;
     width: 0;
     height: 0;
@@ -280,9 +385,6 @@ video {
     padding-left: 20px;
 }
 
-h1 {
-    font-family: 'myFirstFont';
-}
 
 .hero2,
 .hero3,
@@ -353,6 +455,8 @@ h1 {
     display: flex;
     position: relative;
     top: 250px;
+    align-items: center;
+    justify-content: center;
 }
 
 .flex_item {
@@ -383,21 +487,18 @@ h1 {
 }
 
 .flex_container {
-    position: relative;
-    left: 80px;
     border: 2px solid white;
     box-shadow: 1px 0px lightcyan;
 }
 
 img.logo1 {
-    width: 10%;
-    position: relative;
-    top: -30px;
-    left: 40px;
+    width: 45px;
+    margin-top: -30px;
+    margin-left: 40px;
 }
 
 img.social_icon {
-    width: 10%;
+    width: 25px;
 }
 
 .btn {
@@ -481,7 +582,7 @@ img.social_icon {
     position: relative;
     top: 400px;
     background: #EDEDED;
-    font: 400 16px/26px "Assistant";
+    font: 400 16px/15px "Assistant";
     color: #333333;
     letter-spacing: 0;
     clear: both;
@@ -492,20 +593,20 @@ img.social_icon {
     display: flex;
     justify-content: space-evenly;
     width: 80%;
-    padding-left: 40px;
 }
 
 .accordion-item {
     position: relative;
     top: 50px;
-    height: 300px;
+    height: 250px;
 }
 
-button.heading {
+.heading {
     color: #333333;
     font-weight: 700;
     border: none;
     font-size: 15px;
+    padding: 0px;
 }
 
 .first_footer p {
@@ -514,19 +615,19 @@ button.heading {
     line-height: 20px;
 }
 
-hr {
-    position: relative;
-    width: 80%;
+.ico23 {
+    display: none;
 }
 
 .second_footer {
     position: relative;
-    top: 85px;
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    left: 165px;
-    height: 250px;
+    width: 87%;
+    left: 110px;
+    height: 155px;
+    border-top: 1px solid #D7D7D7;
+    padding-top: 55px;
 }
 
 .ico {
@@ -576,15 +677,17 @@ hr {
 
 .third_footer {
     position: relative;
-    top: 50px;
-    height: 130px;
+    height: 90px;
+    border-top: 1px solid #D7D7D7;
+    padding-top: 55px;
+    width: 87%;
+    margin-left: 100px;
 }
 
 .footer_img {
     display: flex;
     width: 40%;
     justify-content: space-around;
-    left: 150px;
     position: relative;
 }
 
@@ -596,9 +699,11 @@ hr {
 .last_footer {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    left: 150px;
+    width: 87%;
+    left: 110px;
     position: relative;
+    border-top: 1px solid #D7D7D7;
+    padding-top: 24px;
 }
 
 .fixed #accordion1 {
@@ -677,6 +782,7 @@ hr {
 
 .sticky1 .nav_left img {
     height: 80px;
+    margin-top: 10px;
 }
 
 .sticky1 .dropbtn::after {
@@ -743,11 +849,13 @@ p.right_footer:after {
 .dropbtn::after {
     content: "";
     position: absolute;
-    top: 5px;
-    left: 89%;
+    top: -2px;
+    left: 88%;
     width: 1px;
     height: 30px;
+    display: block;
     background: #fff;
+    box-shadow: 0 0 4px 0 rgb(51 51 51 / 48%);
 }
 
 .acco_icon {
@@ -762,10 +870,14 @@ p.right_footer:after {
     padding-left: 10px;
 }
 
-@media screen and (min-width:300px) and (max-width:800px) {
+@media screen and (min-width:320px) and (max-width:800px) {
     body {
         margin: 0 auto;
         width: 100%;
+    }
+
+    .fixed .nav_left img {
+        height: 55px;
     }
 
     .body_container {
@@ -821,6 +933,15 @@ p.right_footer:after {
         top: 0;
     }
 
+    .ico23 {
+        font-size: 15px;
+        text-transform: none;
+        color: #333333;
+        position: absolute;
+        right: 0;
+        padding-top: 7px;
+    }
+
     .nav {
         height: 460px;
         margin: 0 auto;
@@ -831,12 +952,14 @@ p.right_footer:after {
     }
 
     .nav_text {
-        top: 30%;
+        top: 40%;
+        font-size: 60px;
+        line-height: 60px;
     }
 
     .nav_right {
-        right: 10px;
-        top: 35px;
+        right: 20px;
+        top: 40px;
         gap: 5px;
     }
 
@@ -847,12 +970,18 @@ p.right_footer:after {
 
     .nav_left {
         position: absolute;
-        left: 5px;
+        left: 15px;
         top: 20px;
     }
 
+    .bg_red {
+        padding: 3px 10px 4px;
+        font-size: 14px;
+        border-radius: unset;
+    }
+
     .nav_left img {
-        height: 80px;
+        height: 90px;
     }
 
     .accordion1-item:hover::before {
@@ -861,7 +990,9 @@ p.right_footer:after {
 
     .fixed .nav_left,
     .fixed .nav_right {
-        top: 0;
+        top: 0px;
+        padding: 5px 0px;
+        left: 0px;
     }
 
     .nav_text h1 {
@@ -876,6 +1007,7 @@ p.right_footer:after {
     .flex_item {
         display: inline;
         margin: 0 auto;
+        width: 100%;
     }
 
     .flex_container {
@@ -900,19 +1032,19 @@ p.right_footer:after {
         display: inline-block;
         left: 0;
         height: auto;
-        width: 100%;
+        width: 90%;
         top: 0;
+        padding-top: 10px;
+        padding-left: 15px;
     }
 
-    hr {
-        top: 0px;
-        width: 100%;
+    .second_footer_first {
+        padding: 20px 0px 30px;
     }
 
-    .second_footer_first,
     .second_footer_second {
-        padding: 20px 0px;
-        text-align: center;
+        padding: 35px 0px 40px;
+        border-top: 1px solid #D7D7D7;
     }
 
     .footer_first_container {
@@ -924,22 +1056,34 @@ p.right_footer:after {
     }
 
     .social2 {
-        margin: 0 auto;
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+
+    .social2 .social_icon2 {
+        line-height: 35px;
+        font-size: 20px;
     }
 
     .last_footer {
         left: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: 100%;
-        text-align: center;
+        width: 90%;
         top: 0px;
         background-color: #EDEDED;
+        padding: 10px 0px 15px 15px;
     }
 
     .line {
         display: none;
+    }
+
+    .right_footer {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
 
     .navbar {
@@ -975,29 +1119,41 @@ p.right_footer:after {
 
     .third_footer {
         top: 0px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0px 15px 15px;
+    }
+
+    .hide {
+        display: none;
     }
 
     .right_footer p {
-        line-height: 0.1;
+        line-height: 0;
         padding: 0;
+        font-size: 13px;
+        margin: 10px 0px;
+    }
+
+    .left_footer p {
+        font-size: 14px;
     }
 
     .footer_img {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 100%;
+        width: 90%;
         justify-items: center;
         left: 0;
         align-items: center;
         justify-content: center;
         gap: 20px;
-        padding: 20px 0px;
     }
 
     .hero_text h1,
     .hero2_text h1 {
         padding: 0px;
-        font-size: 40px;
+        font-size: 35px;
         width: 90%;
     }
 
@@ -1036,8 +1192,8 @@ p.right_footer:after {
     }
 
     .box2 {
-        top: 3100px;
-        border-width: 700px 150px 0 0;
+        top: 0;
+        border-width: 685px 150px 0 0;
     }
 
     .box3 {
@@ -1046,21 +1202,33 @@ p.right_footer:after {
 
     .panel {
         display: none;
+        font-size: 14px;
     }
 
     .accordion-item {
         height: auto;
-        text-align: center;
         top: 0;
+        border-bottom: 1px solid #D7D7D7;
+        width: 100%;
+        padding: 5px 0px;
+        position: relative;
+    }
+
+    .accordion-item:last-child {
+        border: none;
     }
 
     #accordion {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        padding-left: 15px;
+        padding-bottom: 20px;
+        width: 90%;
     }
 
     button.heading {
-        line-height: 3;
+        line-height: 2.3;
+        font-size: 14px;
     }
 
     .accordion1-item {
@@ -1070,6 +1238,10 @@ p.right_footer:after {
 
     .accordion1-item:hover {
         background-color: white;
+    }
+
+    .button_hover {
+        margin-top: 30px;
     }
 
     #accordion1 {
@@ -1085,6 +1257,8 @@ p.right_footer:after {
         overflow: scroll;
         overflow-x: hidden;
         z-index: 9999;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     button.heading1 {
@@ -1122,6 +1296,7 @@ p.right_footer:after {
 
     .aside {
         width: 90%;
+        top: 65px;
     }
 
     .grid {

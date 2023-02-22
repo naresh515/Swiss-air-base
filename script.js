@@ -9,7 +9,7 @@ $(document).ready(function () {
         $(".all_acco").slideToggle();
         $("body").toggleClass("body_container");
     });
-    $(".heading1").click(function () {
+    $(".accordion-item").click(function () {
         $(this).parent(".accordion1-item").find(".panel1").slideToggle();
         $(this).parent(".accordion1-item").prevAll(".accordion1-item").find(".panel1").slideUp();
         $(this).parent(".accordion1-item").nextAll(".accordion1-item").find(".panel1").slideUp();
