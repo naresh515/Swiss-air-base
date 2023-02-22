@@ -334,6 +334,11 @@ aside {
 .hero {
     margin-top: 180px;
     display: flex;
+    height: 750px;
+}
+
+.hero3 {
+    height: 750px;
 }
 
 .background_img {
